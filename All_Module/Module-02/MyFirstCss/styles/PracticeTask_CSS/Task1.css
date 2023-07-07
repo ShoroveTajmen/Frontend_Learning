@@ -1,0 +1,12 @@
+#lastHeading {
+  color: blue;
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.para3 {
+  color: blueviolet;
+  border: 4px double red;
+  margin: 30px;
+  padding: 30px;
+}

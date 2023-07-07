@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Mixed Selectors</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+        * {
+            /* margin: 0; */
+        }
+        /* p {
+            color: red;
+        } */
+        
+        #fifth,
+        li {
+            font-size: 26px;
+        }
+        
+        .holud,
+        .yellow {
+            background-color: yellow;
+        }
+        
+        .bold {
+            font-weight: 800;
+        }
+        
+        input[type="password"] {
+            color: red;
+        }
+        
+        .css {
+            color: aqua;
+        }
+        
+        .blog {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Explore Mixed Selectors</h3>
+    <p>My first <span class="css">line css</span></p>
+    <p class="yellow">My second line css</p>
+    <p>My third line css</p>
+    <p class="yellow bold">My fourth line css</p>
+    <p class="holud" id="fifth">My fifth line css</p>
+    <p class="bold">My sixth line css</p>
+    <p>My seventh line css</p>
+    <ol>
+        <li>Element Selectors</li>
+        <li>ID Selectors</li>
+        <li class="bold holud">Class Selectors</li>
+        <li>universal</li>
+    </ol>
+    <div class="blog">
+        <h3>My blog</h3>
+        <p>
+            lorem Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for its appearance.
+        </p>
+        <p>
+            lorem Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for its appearance.
+        </p>
+    </div>
+    <form action="">
+        <input type="text" />
+        <br />
+        <input type="password" />
+    </form>
+</body>
+
+</html>

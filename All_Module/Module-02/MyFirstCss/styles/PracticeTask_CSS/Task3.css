@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#heading {
+  color: blueviolet;
+  font-size: 40px;
+  font-weight: 10px;
+}
+
+.para {
+  color: brown;
+  margin: 20px;
+  border: 5px solid tomato;
+  padding: 10px;
+}
+
+p {
+  color: rgb(62, 136, 99);
+  text-align: left;
+  margin-top: 50px;
+  border: 20px solid tomato;
+}
