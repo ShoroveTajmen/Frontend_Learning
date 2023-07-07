@@ -1,0 +1,13 @@
+
+.kungfu{
+    width: 200px;
+    height: 300px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+h3{
+   font-weight: normal;
+}
+.submit{
+    margin-top: 20px;
+}
