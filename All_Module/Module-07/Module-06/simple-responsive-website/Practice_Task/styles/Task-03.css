@@ -1,25 +1,32 @@
-/* *{
-    margin: 0px;
-    padding: 0px;
-} */
-div {
-  width: 1570px;
-  height: 100vh;
-  border: 1px solid red;
-  background-image: url("/images/boat1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.img {
+  width: 100%;
+  height: auto;
 }
 /* for small device */
 @media screen and (max-width: 576px) {
-    div{
-        width: 50px;
+    .img{
+        height: 100vh;
     }
-
 }
 /* for medium(tab) device */
-@media screen and (min-width: 576px) and (max-width: 768px) {
+@media screen and (min-width: 576px) and (max-width:768px) {
+    .img{
+        height: 100vh;
+    }
 }
 /* for large(laptop) device */
 @media screen and (min-width: 768px) and (max-width: 992px) {
+    .img{
+        height: 100vh;
+    }
+}
+/* for extra large device */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .img{
+        height: 100vh;
+    }
 }
