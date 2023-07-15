@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.cont-1 {
+    display: flex;
+    height: 50vh;
+
+  }
+  .cont-2 {
+    display: flex;
+    height: 50vh;
+  }
+  .img {
+    width: 300px;
+    height: 388px;
+    
+  }
+  .details{
+    padding: 20px;
+  }
+  /* for small device */
+@media screen and (max-width: 576px) {
+    .cont-1{
+      flex-direction: column;
+      height: 118vh;
+    }
+    .cont-2{
+        flex-direction: column-reverse;
+        height: 118vh;
+      }
+    .img {
+      width: 100%;
+    }
+  }
