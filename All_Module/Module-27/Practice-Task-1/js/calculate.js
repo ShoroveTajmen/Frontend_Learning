@@ -6,6 +6,7 @@
 5. clear the field value
 6. calculate the discount priice
 7. select the please pay portion
+8.set the disccount price at the haveToPayElement
 
 */
 
@@ -19,14 +20,10 @@ document.getElementById("btn-apply").addEventListener("click", function () {
   const inputFieldValue = parseFloat(inputFieldValueString);
   //step-5:
   inputField.value = "";
-  //step-7:
-  const haveToPayElement = document.getElementById("amount");
-  const haveToPayString = haveToPayElement.innerText;
-  const haveToPay = parseFloat(haveToPayString);
-
   //sttep-6:
   const discountPriice = inputFieldValue - inputFieldValue * (30 / 100);
+  //step-7:
+  const haveToPayElement = document.getElementById("amount");
+  haveToPayElement.innerText = discountPriice;
 
-  const payValue = haveToPay + discountPriice;
-  haveToPayElement.innerText = payValue;
 });
