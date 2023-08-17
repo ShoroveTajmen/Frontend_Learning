@@ -6,7 +6,7 @@
 
 //1.
 const myTextArea = document.getElementById('myTextarea');
-//2.
+//2. BoldBuutton
 const boldButton = document.getElementById('boldButton').addEventListener('click', function(){
     if(myTextArea.style.fontWeight === 'bold'){
         myTextArea.style.fontWeight = 'normal';
@@ -14,4 +14,11 @@ const boldButton = document.getElementById('boldButton').addEventListener('click
         myTextArea.style.fontWeight = 'bold';
     }
 })
-//3.
+//3.ItalicButton
+const italicButton = document.getElementById('italicButton').addEventListener('click', function(){
+    if(myTextArea.style.fontStyle === 'italic'){
+        myTextArea.style.fontStyle = 'normal';
+    }else{
+        myTextArea.style.fontStyle = 'italic';
+    }
+})
