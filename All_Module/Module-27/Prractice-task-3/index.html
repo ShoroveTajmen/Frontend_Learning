@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Editor</title>
+    <!-- tailwind and daisy ui -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="bg-indigo-300 h-[600px] mt-12 w-3/4 mx-auto">
+      <h1 class="text-center text-3xl font-bold">My Text Editor</h1>
+      <!-- diiv-container -->
+      <div
+      class="border-solid border-2 border-zinc-500 h-[500px] w-[800px] mx-auto mt-4 bg-indigo-200"
+      >
+      <!-- design portion which i wantt to changing -->
+      <div  class="grid grid-cols-3 mt-4 p-4">
+        <!-- bold, italic, underline parrt -->
+        <div class="list-none flex gap-3">
+            <li><i class="fa-solid fa-bold"></i></li>
+            <li><i class="fa-solid fa-italic"></i></li>
+            <li><i class="fa-solid fa-underline"></i></li>
+          </div>
+          <!-- left, center, right,  -->
+          <div class="list-none flex gap-4">
+            <li><i class="fa-solid fa-align-left"></i></li>
+            <li><i class="fa-solid fa-align-center"></i></li>
+            <li><i class="fa-solid fa-align-right"></i></li>
+            <li><i class="fa-solid fa-align-justify"></i></li>
+          </div>
+          <!-- number typpe, upper/lower case, color type -->
+          <div class="list-none flex gap-3">
+            <li>
+              <input
+                class="w-[50px]"
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="0"
+                max="1000"
+              />
+            </li>
+            <li><i class="fas fa-font"></i><i class="fa fa-font"></i></li>
+            <li><input type="color" id="colorPicker" name="colorPicker" /></li>
+          </div>
+          <hr class="w-[763px] mt-4 border-t-2 border-zinc-500">
+      </div>
+      <!-- text area -->
+      <div class="p-4">
+        <textarea id="myTextarea" name="myTextarea" rows="14" cols="85"></textarea>
+      </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
