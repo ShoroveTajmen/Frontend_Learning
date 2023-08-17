@@ -4,6 +4,9 @@
 3. get the italic button and set the event listener
 4. get the underline button and set the event listener
 5. get the left button and set the text in left side using event liistener
+6.get the center button and set the text in center using event liistener
+7.get the right button and set the text in right using event liistener
+8.get the justify button and set the text  using event liistener
 */
 
 //1.
@@ -34,6 +37,17 @@ const underlineButton = document.getElementById('underlineButton').addEventListe
 })
 //5. text in left side
 const leftButton = document.getElementById('leftButton').addEventListener('click', function(){
-    console.log('lefftt');
-    myTextArea.style.left = 'left';
+    myTextArea.style.textAlign = 'left';
+})
+//6. text in center
+const centerButton = document.getElementById('centerButton').addEventListener('click', function(){
+    myTextArea.style.textAlign = 'center';
+})
+//7. text in right
+const rightButton = document.getElementById('rightButton').addEventListener('click', function(){
+    myTextArea.style.textAlign = 'right';
+})
+//8. justifyButton
+const justifyButton = document.getElementById('justifyButton').addEventListener('click', function(){
+    myTextArea.style.textAlign = 'justify';
 })
