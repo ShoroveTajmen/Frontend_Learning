@@ -3,6 +3,7 @@
 2. get the boldButton and set event  listener
 3. get the italic button and set the event listener
 4. get the underline button and set the event listener
+5. get the left button and set the text in left side using event liistener
 */
 
 //1.
@@ -30,4 +31,9 @@ const underlineButton = document.getElementById('underlineButton').addEventListe
     }else{
         myTextArea.style.textDecoration = 'underline';
     }
+})
+//5. text in left side
+const leftButton = document.getElementById('leftButton').addEventListener('click', function(){
+    console.log('lefftt');
+    myTextArea.style.left = 'left';
 })
