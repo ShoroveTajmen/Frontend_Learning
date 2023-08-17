@@ -30,16 +30,16 @@
       <div  class="grid grid-cols-3 mt-4 p-4">
         <!-- bold, italic, underline parrt -->
         <div class="list-none flex gap-3">
-            <li><i class="fa-solid fa-bold"></i></li>
-            <li><i class="fa-solid fa-italic"></i></li>
-            <li><i class="fa-solid fa-underline"></i></li>
+            <li><button id="boldButton"><i class="fa-solid fa-bold"></i></button></li>
+            <li><button id="italicButton"><i class="fa-solid fa-italic"></i></button></li>
+            <li><button id="underlineButton"><i class="fa-solid fa-underline"></i></button></li>
           </div>
           <!-- left, center, right,  -->
           <div class="list-none flex gap-4">
-            <li><i class="fa-solid fa-align-left"></i></li>
-            <li><i class="fa-solid fa-align-center"></i></li>
-            <li><i class="fa-solid fa-align-right"></i></li>
-            <li><i class="fa-solid fa-align-justify"></i></li>
+            <li><button id="leftButton"><i class="fa-solid fa-align-left"></i></button></li>
+            <li><button id="centerButton"><i class="fa-solid fa-align-center"></i></button></li>
+            <li><button id="rightButton"><i class="fa-solid fa-align-right"></i></button></li>
+            <li><button id="justifyButton"><i class="fa-solid fa-align-justify"></i></button></li>
           </div>
           <!-- number typpe, upper/lower case, color type -->
           <div class="list-none flex gap-3">
@@ -53,8 +53,8 @@
                 max="1000"
               />
             </li>
-            <li><i class="fas fa-font"></i><i class="fa fa-font"></i></li>
-            <li><input type="color" id="colorPicker" name="colorPicker" /></li>
+            <li><button id="upperCaseButton">A</button><button id="lowerCaseButton">a</button></li>
+            <li><input id="textColor" type="color" name="colorPicker" /></li>
           </div>
           <hr class="w-[763px] mt-4 border-t-2 border-zinc-500">
       </div>
