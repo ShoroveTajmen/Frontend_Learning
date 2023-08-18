@@ -43,14 +43,43 @@
                     placeholder="height" id="traingle-height"
                   /><span class="ml-2">cm</span>
                 </p>
-                <p>Area: <span></span></p>
+                <p class="text-2xl">Area: <span id="traingle-area">0</span> cm <sup>2</sup></p>
               <div class="card-actions">
                 <button onclick="calculateTriangleArea()" class="btn btn-primary w-full">Calculate</button>
               </div>
             </div>
           </div>
+          <!-- Rectangle card -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img src="/images/rectangle.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Rectangle!</h2>
+              <p>Area (A) =  w X l</p>
+                <p>
+                  <!-- rectangle-width -->
+                  <input
+                    type="text"
+                    class="border text-xl w-24 px-2 bg-gray-200"
+                    placeholder="width" id="rectangle-width"
+                  /><span class="ml-2">cm</span>
+                  <!-- rectangle-length -->
+                  <input
+                    type="text"
+                    class="border text-xl w-24 px-2 bg-gray-200 ml-4"
+                    placeholder="length" id="rectangle-length"
+                  /><span class="ml-2">cm</span>
+                </p>
+                <p class="text-2xl">Area: <span id="rectangle-area">0</span> cm <sup>2</sup></p>
+              <div class="card-actions">
+                <button onclick="calculateRectangleArea()" class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+
           <!-- second card -->
-          <div class="card w-96 bg-base-100 shadow-xl">
+          <!-- <div class="card w-96 bg-base-100 shadow-xl">
             <figure>
               <img src="/images/rectangle.png" alt="Shoes" />
             </figure>
@@ -61,9 +90,9 @@
                 <button class="btn btn-primary">Buy Now</button>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- third card -->
-          <div class="card w-96 bg-base-100 shadow-xl">
+          <!-- <div class="card w-96 bg-base-100 shadow-xl">
             <figure>
               <img src="/images/rectangle.png" alt="Shoes" />
             </figure>
@@ -74,7 +103,7 @@
                 <button class="btn btn-primary">Buy Now</button>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <!-- area calculator -->
         <div class="w-[400px]">
