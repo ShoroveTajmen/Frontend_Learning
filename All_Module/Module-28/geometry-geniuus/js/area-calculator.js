@@ -36,3 +36,19 @@ function calculateRectangleArea(){
     areaSpan.innerText = area;
     
 }
+
+//reusable function ---> reduce duplicate code
+
+function calculateParallelogramArea(){
+   const base = getInputValue('Parallelogram-base');
+   const height = getInputValue('Parallelogram-height');
+   console.log(height);
+}
+
+//reusable get input value field in numberr
+function getInputValue(fieldId){
+    const inputField = document.getElementById(fieldId);
+    const inputFieldString = inputField.value;
+    const value = parseFloat(inputFieldString);
+    return value;
+}
