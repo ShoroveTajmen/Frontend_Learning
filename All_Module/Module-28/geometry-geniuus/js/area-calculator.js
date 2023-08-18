@@ -42,7 +42,18 @@ function calculateRectangleArea(){
 function calculateParallelogramArea(){
    const base = getInputValue('Parallelogram-base');
    const height = getInputValue('Parallelogram-height');
-   console.log(height);
+
+   const area = base * height;
+   setElementInnerText('Parallelogram-area', area);
+   
+}
+
+//Ellipse
+function calculateEllipseArea(){
+    const major = getInputValue('ellipse-first-radius');
+    const minnor = getInputValue('ellipse-second-radius');
+    const area = 3.14 * major * minnor ;
+    setElementInnerText('ellipse-area', area);
 }
 
 //reusable get input value field in numberr
@@ -51,4 +62,10 @@ function getInputValue(fieldId){
     const inputFieldString = inputField.value;
     const value = parseFloat(inputFieldString);
     return value;
+}
+
+//reusable set span, p , div, etc text
+function setElementInnerText(elementId, area){
+    const element = document.getElementById(elementId);
+    element.innerText = area;
 }
