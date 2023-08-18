@@ -78,8 +78,18 @@ function getInputValue(fieldId){
     return value;
 }
 
+//add to calculation entry
+
+
 //reusable set span, p , div, etc text
 function setElementInnerText(elementId, area){
     const element = document.getElementById(elementId);
     element.innerText = area;
 }
+
+//Data Validation
+/*
+1. set the proper type of the input field. (number,data, email )
+2. check type using typeof
+3.NaN means: Not a Number. isNaN is checkking wheather the input is a number or not
+*/
