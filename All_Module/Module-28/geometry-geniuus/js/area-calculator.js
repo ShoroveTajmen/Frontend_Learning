@@ -67,7 +67,9 @@ function calculateEllipseArea(){
     const minnor = getInputValue('ellipse-second-radius');
 
     const area = 3.14 * major * minnor ;
-    setElementInnerText('ellipse-area', area);
+    const areaDecimal = area.toFixed(2);
+    console.log(areaDecimal);
+    setElementInnerText('ellipse-area', areaDecimal);
 }
 
 //reusable get input value field in numberr
