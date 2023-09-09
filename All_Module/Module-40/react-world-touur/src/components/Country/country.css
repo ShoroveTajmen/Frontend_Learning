@@ -8,3 +8,6 @@
     width: 350px;
     height: 200px;
 }
+.visited{
+    background-color: rgb(104, 102, 101);
+}
