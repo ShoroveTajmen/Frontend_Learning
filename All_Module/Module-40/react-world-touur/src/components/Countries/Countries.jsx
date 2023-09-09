@@ -1,0 +1,25 @@
+import { useEffect } from "react";
+import { useState } from "react";
+
+const Countries = () => {
+      //For data storing need useState() --> it returns an array
+  const [countries, setCountries] = useState([]);
+
+  //for data loading useEffect
+  useEffect(() => {
+    fetch('https://restcountries.com/v3.1/all')
+    .then(res => res.json())
+    .then(data => console.log(data))
+
+  }, [])
+
+
+
+    return (
+        <div>
+            <h3>Countries</h3>
+        </div>
+    );
+};
+
+export default Countries;
