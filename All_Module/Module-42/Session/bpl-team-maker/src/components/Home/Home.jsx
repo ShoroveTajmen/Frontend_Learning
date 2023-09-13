@@ -27,7 +27,7 @@ const Home = () => {
     const totalRemaining = 20000 - count;
 
     if (count >= 20000) {
-      return alert("no more added");
+      return alert("r actor neya jabe na taka sesh");
     } else {
       setTotalCost(count);
       setRemaining(totalRemaining);
