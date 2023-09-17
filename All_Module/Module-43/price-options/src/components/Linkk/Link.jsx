@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 const Link = ({route}) => {
   return (
     <li className="mr-6">
@@ -6,5 +6,9 @@ const Link = ({route}) => {
     </li>
   );
 };
+
+Link.propTypes = {
+    route: PropTypes.object
+}
 
 export default Link;
