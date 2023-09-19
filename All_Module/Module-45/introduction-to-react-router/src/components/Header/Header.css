@@ -1,3 +1,8 @@
 nav a{
     margin-right: 8px;
 }
+nav a.active{
+    text-decoration: underline;
+    color: peru;
+    background-color: rgb(45, 43, 43);
+}
