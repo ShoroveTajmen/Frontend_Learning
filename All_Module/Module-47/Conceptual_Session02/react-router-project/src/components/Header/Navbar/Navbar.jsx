@@ -1,10 +1,13 @@
 import { NavLink } from "react-router-dom";
+import Logo from "./Logo";
 
 const Navbar = () => {
   return (
     <div>
-      <nav>
-        <ul>
+      <nav className="flex justify-between items-center py-6 shadow-md px-5">
+        <Logo></Logo>
+
+        <ul className="flex gap-5">
           <li>
             <NavLink
               to="/"
@@ -15,7 +18,28 @@ const Navbar = () => {
               Home
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/favourites"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-green-400 underline" : ""
+              }
+            >
+             Favourites
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/login"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-green-400 underline" : ""
+              }
+            >
+             Login
+            </NavLink>
+          </li>
         </ul>
+
       </nav>
     </div>
   );
