@@ -2,6 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layouts/MainLayout";
 import Home from "../Pages/Home/Home";
 import Products from "../Pages/Products/Products";
+import Product from "../Pages/Product/Product";
+import DashboardLayout from "../Layouts/DashboardLayout";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import Profile from "../Pages/Profile/Profile";
+import EditProfile from "../Pages/EditProfile/EditProfile";
 
 const myCreatedRoute = createBrowserRouter([
 
@@ -19,8 +24,27 @@ const myCreatedRoute = createBrowserRouter([
           loader: ()=> fetch(`https://dummyjson.com/products`)
         },
         {
+            path: '/products/:id',
+            element: <Product></Product>,
+            loader: (object)=>fetch(`https://dummyjson.com/products/${object.params.id}`)
+        },
+        {
           path: '/dashboard',
-          element: <div>thisis dashboard</div>
+          element: <DashboardLayout></DashboardLayout>,
+          children: [
+            {
+                path: '/dashboard',
+                element: <Dashboard></Dashboard>
+            },
+            {
+                path: '/dashboard/profile',
+                element: <Profile></Profile>
+            },
+            {
+                path: '/dashboard/editProfile',
+                element: <EditProfile></EditProfile>
+            },
+          ]
         },
       ]
     }
