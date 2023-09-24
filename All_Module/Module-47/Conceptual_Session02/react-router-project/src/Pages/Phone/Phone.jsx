@@ -16,7 +16,7 @@ const Phone = () => {
     setPhone(findPhone);
   }, [id, phones]);
 
-  console.log(phone);
+  // console.log(phone);
 
   return (
     <div>

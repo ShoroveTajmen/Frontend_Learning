@@ -2,7 +2,7 @@ import PhoneCard from "./PhonesCard";
 
 
 const Phones = ({phones}) => {
-    console.log(phones);
+    // console.log(phones);
     return (
         <div className="py-10">
             <h1 className="text-2xl text-center ">All categories phones</h1>
