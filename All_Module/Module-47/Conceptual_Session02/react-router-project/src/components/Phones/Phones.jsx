@@ -1,4 +1,4 @@
-import PhoneCard from "./PhoneCard";
+import PhoneCard from "./PhonesCard";
 
 
 const Phones = ({phones}) => {
