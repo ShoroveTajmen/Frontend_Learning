@@ -1,4 +1,5 @@
 import {
+    GithubAuthProvider,
   GoogleAuthProvider,
   getAuth,
   signInWithPopup,
@@ -10,10 +11,11 @@ import { useState } from "react";
 const Login = () => {
   const [user, setUser] = useState(null);
   const auth = getAuth(app);
-  const provider = new GoogleAuthProvider();
+  const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
 
   const handleGoogleSignIn = () => {
-    signInWithPopup(auth, provider)
+    signInWithPopup(auth, googleProvider)
       .then((result) => {
         const loggedInUseer = result.user;
         console.log(loggedInUseer);
@@ -35,6 +37,20 @@ const Login = () => {
       });
   };
 
+
+  const handleGithuubSignIn = () => {
+    signInWithPopup(auth, githubProvider)
+    .then(result => {
+        const loggedInUser = result.user;
+        console.log(loggedInUser);
+        setUser(loggedInUser);
+    })
+    .catch(error => {
+        console.log(error);
+    })
+  }
+
+
   return (
     <div>
       {/* uuser ? loggout : sign in */}
@@ -42,7 +58,10 @@ const Login = () => {
       {user ? (
         <button onClick={handleSignOut}>Sign Out</button>
       ) : (
-        <button onClick={handleGoogleSignIn}>Google Login</button>
+        <div>
+            <button onClick={handleGoogleSignIn}>Google Login</button>
+            <button onClick={handleGithuubSignIn}>Github Login</button>
+        </div>
       )}
       {user && (
         <div>
