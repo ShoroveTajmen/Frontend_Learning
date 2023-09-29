@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -14,7 +14,8 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     const accepted = e.target.terms.checked;
-    console.log(email, password, accepted);
+    const name = e.target.name.value;
+    console.log(email, password, accepted, name);
 
     //reset error
     setRegisterError("");
@@ -40,6 +41,12 @@ const Register = () => {
       .then((result) => {
         console.log(result.user);
         setSuccess("User created successfully");
+
+        //send verification email:
+        sendEmailVerification(result.user)
+        .then(()=> {
+            alert('Please check your email and verify your account')
+        })
       })
       .catch((error) => {
         console.log(error);
@@ -52,6 +59,15 @@ const Register = () => {
       <div className="mx-auto md:w-1/2">
         <h2 className="text-3xl mb-8">Please Register</h2>
         <form onSubmit={handleRegister}>
+        <input
+            className="mb-4 w-full py-2 px-4 border-2 rounded-lg border-blue-500"
+            type="text"
+            name="name"
+            id=""
+            placeholder="Your Name"
+            required
+          />
+          <br />
           <input
             className="mb-4 w-full py-2 px-4 border-2 rounded-lg border-blue-500"
             type="email"
