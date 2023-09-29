@@ -1,11 +1,13 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import { useState } from "react";
+import { FaEye, FaEyeSlash} from 'react-icons/fa';
 
 const Register = () => {
 
     const [registerError, setRegisterError] = useState('');
     const [success, setSuccess] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -21,6 +23,9 @@ const Register = () => {
         if(password.length < 6){
             setRegisterError('Password should be at least 6 characters (auth/weak-password).');
             return
+        }else if(!/[A-Z]/.test(password)){
+            setRegisterError('Your password should have at least one upper case characters.')
+            return;
         }
 
         //create user
@@ -42,9 +47,17 @@ const Register = () => {
       <div className="mx-auto md:w-1/2">
         <h2 className="text-3xl mb-8">Please Register</h2>
         <form onSubmit={handleRegister}>
-          <input className="mb-4 w-3/4 py-2 px-4 border-2 rounded-lg border-blue-500" type="email" name="email" id="" placeholder="Email Address" required/>
+          <input 
+          className="mb-4 w-3/4 py-2 px-4 border-2 rounded-lg border-blue-500" type="email" 
+          name="email" id="" placeholder="Email Address" required/>
           <br />
-          <input className="mb-4 w-3/4 py-2 px-4 border-2 rounded-lg border-blue-500" type="password" name="password" id="" placeholder="Your Password" required/>
+          <input className="mb-4 w-3/4 py-2 px-4 border-2 rounded-lg border-blue-500" type={showPassword ? "text" : "password"}
+          name="password" id="" placeholder="Your Password" required/>
+          <span onClick={()=> setShowPassword(!showPassword)}>
+            {
+                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+            }
+            </span>
           <br />
           <input className="btn btn-secondary mb-4 w-3/4" type="submit" name="Register" id="" />
         </form>
