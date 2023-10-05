@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -7,6 +7,9 @@ const Login = () => {
 
     // eslint-disable-next-line no-unused-vars
     const {signIn} = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log('loction in the login pge', location)
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -18,7 +21,9 @@ const Login = () => {
 
     signIn(email, password)
     .then(result => {
-      console.log(result.user)
+      console.log(result.user);
+      ///navigate after login
+      navigate(location?.state ? location.state : '/')
     })
     .catch(error => {
       console.log(error);
