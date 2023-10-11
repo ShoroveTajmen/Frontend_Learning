@@ -103,7 +103,7 @@ function addToCalculationEntry(areaType, area){
     console.log(areaType + ' ' + area);
     const calculationEntry = document.getElementById('calculation-entry');
 
-    const count = calculationEntry.childElementCount;;
+    const count = calculationEntry.childElementCount;
 
     const p = document.createElement('p');
     p.classList.add('my-4')

@@ -13,7 +13,7 @@ const Favourites = () => {
       setFavourites(favoutiteItem);
 
       const total = favoutiteItem.reduce(
-        (preValue, currentItem) => preValue + currentItem.price,
+         (preValue, currentItem) => preValue + currentItem.price,
         0
       );
       console.log(total);

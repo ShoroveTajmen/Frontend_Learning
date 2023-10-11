@@ -24,6 +24,7 @@ document.getElementById("btn-apply").addEventListener("click", function () {
   const discountPriice = inputFieldValue - inputFieldValue * (30 / 100);
   //step-7:
   const haveToPayElement = document.getElementById("amount");
+  //step-8:
   haveToPayElement.innerText = discountPriice;
 
 });

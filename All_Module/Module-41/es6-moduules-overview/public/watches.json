@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "TechGuru X1",
+    "price": 199.999
+  },
+  {
+    "id": 2,
+    "name": "SmartLife Pro",
+    "price": 149.95
+  },
+  {
+    "id": 3,
+    "name": "WatchMaster 2000",
+    "price": 249.99
+  },
+  {
+    "id": 4,
+    "name": "EcoTech Wearable",
+    "price": 179.5
+  },
+  {
+    "id": 5,
+    "name": "GizmoTime Elite",
+    "price": 219.0
+  }
+]
