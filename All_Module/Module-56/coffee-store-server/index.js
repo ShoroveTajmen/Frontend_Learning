@@ -41,6 +41,13 @@ async function run() {
     //making database and database collection
     const coffeeCollection = client.db('coffeeDB').collection('coffee');
 
+    //get request, to get the from the server
+    app.get('/coffee',async(req, res)=> {
+        const cursor = coffeeCollection.find();
+        const result = await cursor.toArray();
+        res.send(result);
+    })
+
     //post request
     app.post('/coffee', async(req,res)=>{
         const newCoffee = req.body;
