@@ -1,11 +1,29 @@
 import { Link } from "react-router-dom";
 import img from "../../../src/assets/images/login/login.svg";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
+
+  const {signin} = useContext(AuthContext);
 
 
     const handleLogin = e => {
         e.preventDefault()
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password)
+
+        signin(email, password)
+        .then(result => {
+          const user = result.user;
+          console.log(user);
+        })
+        .catch(error => {
+          console.log(error);
+        })
+
     }
 
   return (
@@ -14,8 +32,7 @@ const Login = () => {
         <div className="w-1/2 mr-12">
           <img src={img} alt="" />
         </div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <form className="card-body">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 p-12">
             <h1 className="text-3xl font-bold text-center">Login</h1>
             <form onSubmit={handleLogin}>
               <div className="form-control">
@@ -56,7 +73,6 @@ const Login = () => {
               </div>
             </form>
             <p className="my-4 text-center">New to Car Doctors <Link className="text-orange-600 font-bold" to='/signup'>Sign Up</Link></p>
-          </form>
         </div>
       </div>
     </div>
