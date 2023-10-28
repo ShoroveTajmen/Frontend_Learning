@@ -4,17 +4,19 @@ const jwt = require('jsonwebtoken');
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 require("dotenv").config();
 const app = express();
+var cookieParser = require('cookie-parser')
 const port = process.env.PORT || 5000;
 
 //middleware
 const corsOptions = {
-  origin: "*",
+  origin: "http://localhost:5173",
   credentials: true,
   optionSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
 //access post body and convert into json format
 app.use(express.json());
+app.use(cookieParser());
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.es62grd.mongodb.net/?retryWrites=true&w=majority`;
 
@@ -45,7 +47,7 @@ async function run() {
         .cookie('token', token, {
             httpOnly: true,
             secure: false,
-            sameSite: 'none'
+            // sameSite: 'none'
         })
         .send({success: true})
     }})
@@ -77,6 +79,7 @@ async function run() {
 
     app.get("/bookings", async (req, res) => {
       console.log(req.query.email);
+      console.log('tok tok token', req.cookies.token)
       let query = {};
       if (req.query?.email) {
         query = { email: req.query.email };
