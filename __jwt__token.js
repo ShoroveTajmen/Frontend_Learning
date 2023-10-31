@@ -14,4 +14,8 @@
 
 /****
  * 1. jwt ---> json web token
+ * 2. ggenerate a token by using jwt.token
+ * 3. create api set to cookie. http only, secure, sameSite
+ * 4. from client side: axios withCredentials true
+ * 5. cors setup origin and credentials:: true
  */
