@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const {
@@ -10,15 +11,14 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
 
-  const {createUser} = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
 
   const onSubmit = (data) => {
     console.log(data);
-    createUser(data.email, data.password)
-    .then(result => {
-        const loggedUser = result.user;
-        console.log(loggedUser)
-    })
+    createUser(data.email, data.password).then((result) => {
+      const loggedUser = result.user;
+      console.log(loggedUser);
+    });
   };
 
   return (
@@ -116,6 +116,11 @@ const SignUp = () => {
                 />
               </div>
             </form>
+            <p>
+              <small>
+                Have an account? <Link to="/login">Login</Link>
+              </small>
+            </p>
           </div>
         </div>
       </div>
