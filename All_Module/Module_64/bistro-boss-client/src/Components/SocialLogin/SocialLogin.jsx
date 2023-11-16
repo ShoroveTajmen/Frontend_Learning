@@ -6,12 +6,15 @@ import { useNavigate } from "react-router-dom";
 
 const SocialLogin = () => {
     const {googleLogin} = useContext(AuthContext);
+    // console.log(googleLogin)
     const axiosPublic = useAxiosPublic();
     const navigate = useNavigate();
 
 
     const handleLogin = (login) => {
+      console.log(login)
         login()
+        
         .then(res => {
             console.log(res.user);
             const userInfo = {
