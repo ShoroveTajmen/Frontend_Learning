@@ -68,15 +68,15 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/reservation">
+                <NavLink to="/dashboard/history">
                   {" "}
-                  <FaCalendar></FaCalendar>Reservation
+                  <FaCalendar></FaCalendar>Payment History
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/dashboard/cart">
                   {" "}
-                  <FaShoppingCart></FaShoppingCart>My Cart
+                  <FaShoppingCart></FaShoppingCart>My Cart ({cart.length})
                 </NavLink>
               </li>
               <li>
@@ -86,9 +86,9 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/bookings">
+                <NavLink to="/dashboard/paymentHistory">
                   {" "}
-                  <FaList></FaList>My Bookings
+                  <FaList></FaList>Payment Real History
                 </NavLink>
               </li>
             </>
